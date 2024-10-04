@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
+const dotenv = require('dotenv');
+dotenv.config();
 
 app.listen(process.env.PORT);
 
@@ -9,6 +10,7 @@ const cartsRouter =  require('./routes/cart');
 const likesRouter =  require('./routes/likes');
 const ordersRouter =  require('./routes/orders');
 const usersRouter =  require('./routes/users');
+const db = require('./mariadb')
 
 app.use('/', booksRouter);
 app.use('/', cartsRouter);
