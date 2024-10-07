@@ -6,7 +6,6 @@ const {
     passwordReset, 
     passwordResetRequest 
 } = require('../controller/UserController');
-
 router.use(express.json());
 
 // 회원가입
